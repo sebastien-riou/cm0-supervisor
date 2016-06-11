@@ -9,6 +9,7 @@ The supervisor, as implied by its name, is in control of the MCU. It executes al
 After few initializations it launches the usermode code which runs in unprivileged mode. The supervisor project expose few services to the usermode project:
 * encryption/decryption with a secret key "key1"
 * decryption only with a secret key "key2"
+
 Those services are implemented by software, the point of using the supervisor here is to protect the secret keys from any malware executing in usermode.
 The services are exposed via the SVC mechanism, a typical "software interrupt" scheme that has equivalents on many other CPU architectures.
 
