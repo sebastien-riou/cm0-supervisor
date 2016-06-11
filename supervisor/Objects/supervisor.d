@@ -1,0 +1,11 @@
+.\objects\supervisor.o: supervisor.c
+.\objects\supervisor.o: generic_cortex_m0.h
+.\objects\supervisor.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include\core_cm0plus.h
+.\objects\supervisor.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\supervisor.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include\core_cmInstr.h
+.\objects\supervisor.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include\core_cmFunc.h
+.\objects\supervisor.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\Device\ARM\ARMCM0plus\Include\system_ARMCM0plus.h
+.\objects\supervisor.o: aes.h
+.\objects\supervisor.o: types.h
+.\objects\supervisor.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\supervisor.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h

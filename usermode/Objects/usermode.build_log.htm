@@ -1,0 +1,64 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.15
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: sebastien riou, nimp, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.15.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 2 (build 169)
+Assembler:       Armasm.exe V5.05 update 2 (build 169)
+Linker/Locator:  ArmLink.exe V5.05 update 2 (build 169)
+Library Manager: ArmAr.exe V5.05 update 2 (build 169)
+Hex Converter:   FromElf.exe V5.05 update 2 (build 169)
+CPU DLL:         SARMCM3.DLL V5.15.0
+Dialog DLL:      DARMCM1.DLL V1.12.0.0
+Target DLL:      CMSIS_AGDI.dll V1.21.12.0
+Dialog DLL:      TARMCM1.DLL V1.9.0.0
+ 
+<h2>Project:</h2>
+C:\Users\sebastien\Documents\dev\dac-rep\trunk\supervisor\usermode\usermode.uvprojx
+Project File Date:  05/14/2016
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.05 update 2 (build 169)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild Project 'usermode' - Target 'Target 1'
+compiling main.c...
+C:\Users\sebastien\Documents\dev\dac-rep\trunk\supervisor\usermode\main.c(68): warning:  #111-D: statement is unreachable
+        return 0;
+main.c: 1 warning, 0 errors
+assembling startup_ARMCM0plus.s...
+compiling system_ARMCM0plus.c...
+linking...
+Program Size: Code=2988 RO-data=236 RW-data=24 ZI-data=5472  
+".\Objects\usermode.axf" - 0 Error(s), 1 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.4.3.0.pack
+                ARM::CMSIS:CORE:4.1.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 4.1.0
+   * Component: Startup Version: 1.0.1
+
+<h2>Collection of Component include folders:</h2>
+  C:\Users\sebastien\Documents\dev\dac-rep\trunk\supervisor\usermode\RTE
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\Device\ARM\ARMCM0plus\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:4.1.0
+
+   * Component: ARM::Device:Startup:1.0.1
+      Source file:   Device\ARM\ARMCM0plus\Source\system_ARMCM0plus.c
+      Include file:  Device\ARM\ARMCM0plus\Include\ARMCM0plus.h
+      Source file:   Device\ARM\ARMCM0plus\Source\ARM\startup_ARMCM0plus.s
+</pre>
+</body>
+</html>

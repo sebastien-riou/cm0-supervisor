@@ -1,0 +1,9 @@
+--cpu Cortex-M0+
+".\objects\startup.o"
+".\objects\supervisor.o"
+".\objects\misc.o"
+".\objects\wolf_aes.o"
+".\objects\aes_core.o"
+--ro-base 0x00000000 --entry 0x00000000 --rw-base 0x20000000 --entry Reset_Handler --first __Vectors --strict --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\supervisor.map" -o .\Objects\supervisor.axf
