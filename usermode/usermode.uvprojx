@@ -311,7 +311,7 @@
               </OCR_RVCT3>
               <OCR_RVCT4>
                 <Type>1</Type>
-                <StartAddress>0x10000000</StartAddress>
+                <StartAddress>0x1000000</StartAddress>
                 <Size>0x10000</Size>
               </OCR_RVCT4>
               <OCR_RVCT5>
@@ -336,13 +336,13 @@
               </OCR_RVCT8>
               <OCR_RVCT9>
                 <Type>0</Type>
-                <StartAddress>0x20000000</StartAddress>
+                <StartAddress>0x21000000</StartAddress>
                 <Size>0x10000</Size>
               </OCR_RVCT9>
               <OCR_RVCT10>
                 <Type>0</Type>
-                <StartAddress>0x20010000</StartAddress>
-                <Size>0x10000</Size>
+                <StartAddress>0x20000000</StartAddress>
+                <Size>0x20000</Size>
               </OCR_RVCT10>
             </OnChipMemories>
             <RvctStartVector></RvctStartVector>
@@ -396,8 +396,8 @@
             <noStLib>0</noStLib>
             <RepFail>1</RepFail>
             <useFile>0</useFile>
-            <TextAddressRange>0x10000000</TextAddressRange>
-            <DataAddressRange>0x20000000</DataAddressRange>
+            <TextAddressRange>0x01000000</TextAddressRange>
+            <DataAddressRange>0x21000000</DataAddressRange>
             <pXoBase></pXoBase>
             <ScatterFile></ScatterFile>
             <IncludeLibs></IncludeLibs>

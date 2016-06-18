@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\supervisor.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\supervisor.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050169: Last Updated: Sat Jun 11 10:00:26 2016
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050169: Last Updated: Sat Jun 18 10:30:31 2016
 <BR><P>
 <H3>Maximum Stack Usage =        536 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -825,7 +825,7 @@ Global Symbols
 <LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SAPI_AesDecryptDirect
 </UL>
 
-<P><STRONG><a name="[2f]"></a>ConfigMpu</STRONG> (Thumb, 30 bytes, Stack size 4 bytes, supervisor.o(i.ConfigMpu))
+<P><STRONG><a name="[2f]"></a>ConfigMpu</STRONG> (Thumb, 32 bytes, Stack size 4 bytes, supervisor.o(i.ConfigMpu))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = ConfigMpu &rArr; MpuSetRegion
 </UL>
 <BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MpuSetRegion
@@ -838,7 +838,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConfigMpu
 </UL>
 
-<P><STRONG><a name="[2c]"></a>SAPI_AesDecryptDirect</STRONG> (Thumb, 42 bytes, Stack size 296 bytes, supervisor.o(i.SAPI_AesDecryptDirect))
+<P><STRONG><a name="[2c]"></a>SAPI_AesDecryptDirect</STRONG> (Thumb, 58 bytes, Stack size 296 bytes, supervisor.o(i.SAPI_AesDecryptDirect))
 <BR><BR>[Stack]<UL><LI>Max Depth = 520<LI>Call Chain = SAPI_AesDecryptDirect &rArr; AesCbcDecrypt &rArr; AesDecrypt &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AesSetKey
@@ -846,7 +846,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup.o(.text)
 </UL>
-<P><STRONG><a name="[2d]"></a>SAPI_AesDecryptDirectKey2</STRONG> (Thumb, 42 bytes, Stack size 296 bytes, supervisor.o(i.SAPI_AesDecryptDirectKey2))
+<P><STRONG><a name="[2d]"></a>SAPI_AesDecryptDirectKey2</STRONG> (Thumb, 58 bytes, Stack size 296 bytes, supervisor.o(i.SAPI_AesDecryptDirectKey2))
 <BR><BR>[Stack]<UL><LI>Max Depth = 520<LI>Call Chain = SAPI_AesDecryptDirectKey2 &rArr; AesCbcDecrypt &rArr; AesDecrypt &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AesSetKey
@@ -854,7 +854,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup.o(.text)
 </UL>
-<P><STRONG><a name="[2b]"></a>SAPI_AesEncryptDirect</STRONG> (Thumb, 42 bytes, Stack size 296 bytes, supervisor.o(i.SAPI_AesEncryptDirect))
+<P><STRONG><a name="[2b]"></a>SAPI_AesEncryptDirect</STRONG> (Thumb, 58 bytes, Stack size 296 bytes, supervisor.o(i.SAPI_AesEncryptDirect))
 <BR><BR>[Stack]<UL><LI>Max Depth = 536<LI>Call Chain = SAPI_AesEncryptDirect &rArr; AesCbcEncrypt &rArr; AesEncrypt &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AesSetKey

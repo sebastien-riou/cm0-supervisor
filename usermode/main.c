@@ -39,6 +39,27 @@ void testAes(void){
 	AesDecryptDirectKey2(out,plain);
 }
 
+//attack suggested by Odile Derouet
+//try to read in supervisor memory by requesting encryption of it
+//supervisor code has been fixed to avoid it: it enforce that all I/O pointers points in the user mode memory space
+//memory map has been changed such that bit 24 in addresses is set to 1 for user mode memories.
+void pointer_attack(void){
+	uint8_t out[16];
+	uint8_t *target = (uint8_t*)0;//what we would like to encrypt: something from supervisor memory space
+	uint8_t *expected = (uint8_t*)((uint32_t)target | 0x01000000);//what will be actually encrypted if supervisor mode is correctly protected.
+	AesEncryptDirect(out,target);
+	AesDecryptDirect(out,out);
+	if(0==memcmp(out,expected,sizeof(out))){
+		printf("pointer attack failed, we just read usermode memory");
+	} else {
+		int i;
+		printf("pointer attack may have succeeded, is this supervisor's secret data ?");
+		for(i=0;i<sizeof(out);i++){
+			printf("%02X ",out[i]);
+		}
+	}
+}
+
 volatile uint8_t temp;
 
 void testReadAccess(uint8_t*address){
@@ -51,11 +72,7 @@ void testAccessLowBoundary(uint8_t*lastValid){
 }
 __svc(0) void svcProbe(uint32_t r0,uint32_t r1,uint32_t r2,uint32_t r3);
 
-int main(void){
-	memset(fputc_output_buf,0,1024);
-	printf("hello world\r\n");
-	testAes();
-	printf("testAes passed\r\n");
+void silly_tests(void){
 	//from here we test sandboxing, everyline is supposed to end up in hardfault handler
 	svcProbe(0,0xFB,0,0x10000000);//try the switch to usermode SVC with target address 0xFA, which is a BX R3 instruction.
 	svcProbe(4,0,0,0);//second unused funcId
@@ -64,6 +81,15 @@ int main(void){
 	testReadAccess((uint8_t*)0x00000000);//first address of supervisor ROM
 	testReadAccess((uint8_t*)0x0003FFFF);//last address of supervisor ROM
 	testAccessLowBoundary((uint8_t*)0x2000FFFF);//last address of usermode RAM
+}
+
+int main(void){
+	memset(fputc_output_buf,0,1024);
+	printf("hello world\r\n");
+	testAes();
+	printf("testAes passed\r\n");
+	pointer_attack();
+	silly_tests();
 	while(1);
 	return 0;
 }

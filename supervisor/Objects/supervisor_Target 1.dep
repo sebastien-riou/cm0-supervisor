@@ -1,6 +1,6 @@
 Dependencies for Project 'supervisor', Target 'Target 1': (DO NOT MODIFY !)
-F (.\startup.s)(0x575BC4C4)(--cpu Cortex-M0+ --li --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Users\sebastien\Documents\dev\dac-rep\trunk\supervisor\supervisor\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\Device\ARM\ARMCM0plus\Include--pd "__UVISION_VERSION SETA 515" --pd "_RTE_ SETA 1" --pd "ARMCM0P SETA 1"--list .\listings\startup.lst --xref -o .\objects\startup.o --depend .\objects\startup.d)
-F (.\supervisor.c)(0x575BC50C)(-c --cpu Cortex-M0+ -D__EVAL --li -g -O0 --apcs=interwork --split_sections-I C:\Users\sebastien\Documents\dev\dac-rep\trunk\supervisor\supervisor\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="515" -D_RTE_ -DARMCM0P-o .\objects\supervisor.o --omf_browse .\objects\supervisor.crf --depend .\objects\supervisor.d)
+F (.\startup.s)(0x5764FEFC)(--cpu Cortex-M0+ --li --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Users\sebastien\Documents\dev\cm0-supervisor-demo\cm0-supervisor\supervisor\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\Device\ARM\ARMCM0plus\Include--pd "__UVISION_VERSION SETA 515" --pd "_RTE_ SETA 1" --pd "ARMCM0P SETA 1"--list .\listings\startup.lst --xref -o .\objects\startup.o --depend .\objects\startup.d)
+F (.\supervisor.c)(0x576506A0)(-c --cpu Cortex-M0+ -D__EVAL --li -g -O0 --apcs=interwork --split_sections-I C:\Users\sebastien\Documents\dev\cm0-supervisor-demo\cm0-supervisor\supervisor\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="515" -D_RTE_ -DARMCM0P-o .\objects\supervisor.o --omf_browse .\objects\supervisor.crf --depend .\objects\supervisor.d)
 I (generic_cortex_m0.h)(0x572D8227)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include\core_cm0plus.h)(0x55093C04)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
@@ -11,14 +11,14 @@ I (aes.h)(0x55AB8F8B)
 I (types.h)(0x55AB9447)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54C245B8)
 I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x54C245B8)
-F (.\misc.c)(0x55AB91C7)(-c --cpu Cortex-M0+ -D__EVAL --li -g -O0 --apcs=interwork --split_sections-I C:\Users\sebastien\Documents\dev\dac-rep\trunk\supervisor\supervisor\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="515" -D_RTE_ -DARMCM0P-o .\objects\misc.o --omf_browse .\objects\misc.crf --depend .\objects\misc.d)
+F (.\misc.c)(0x55AB91C7)(-c --cpu Cortex-M0+ -D__EVAL --li -g -O0 --apcs=interwork --split_sections-I C:\Users\sebastien\Documents\dev\cm0-supervisor-demo\cm0-supervisor\supervisor\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="515" -D_RTE_ -DARMCM0P-o .\objects\misc.o --omf_browse .\objects\misc.crf --depend .\objects\misc.d)
 I (types.h)(0x55AB9447)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54C245B8)
 I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x54C245B8)
-F (.\wolf_aes.c)(0x55ABC1CC)(-c --cpu Cortex-M0+ -D__EVAL --li -g -O0 --apcs=interwork --split_sections-I C:\Users\sebastien\Documents\dev\dac-rep\trunk\supervisor\supervisor\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="515" -D_RTE_ -DARMCM0P-o .\objects\wolf_aes.o --omf_browse .\objects\wolf_aes.crf --depend .\objects\wolf_aes.d)
+F (.\wolf_aes.c)(0x55ABC1CC)(-c --cpu Cortex-M0+ -D__EVAL --li -g -O0 --apcs=interwork --split_sections-I C:\Users\sebastien\Documents\dev\cm0-supervisor-demo\cm0-supervisor\supervisor\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="515" -D_RTE_ -DARMCM0P-o .\objects\wolf_aes.o --omf_browse .\objects\wolf_aes.crf --depend .\objects\wolf_aes.d)
 I (aes.h)(0x55AB8F8B)
 I (types.h)(0x55AB9447)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54C245B8)
 I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x54C245B8)
 I (misc.c)(0x55AB91C7)
-F (.\aes_core.s)(0x55ABC101)(--cpu Cortex-M0+ --li --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Users\sebastien\Documents\dev\dac-rep\trunk\supervisor\supervisor\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\Device\ARM\ARMCM0plus\Include--pd "__UVISION_VERSION SETA 515" --pd "_RTE_ SETA 1" --pd "ARMCM0P SETA 1"--list .\listings\aes_core.lst --xref -o .\objects\aes_core.o --depend .\objects\aes_core.d)
+F (.\aes_core.s)(0x55ABC101)(--cpu Cortex-M0+ --li --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Users\sebastien\Documents\dev\cm0-supervisor-demo\cm0-supervisor\supervisor\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\Device\ARM\ARMCM0plus\Include--pd "__UVISION_VERSION SETA 515" --pd "_RTE_ SETA 1" --pd "ARMCM0P SETA 1"--list .\listings\aes_core.lst --xref -o .\objects\aes_core.o --depend .\objects\aes_core.d)

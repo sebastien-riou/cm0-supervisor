@@ -18,9 +18,9 @@ ARM Macro Assembler    Page 1
                        Heap_Size
                                EQU              0x00000C00
     8 00000000         
-    9 00000000 10000000 
+    9 00000000 01000000 
                        Boot_Base_Address
-                               EQU              0x10000000
+                               EQU              0x01000000
    10 00000000         
    11 00000000         
    12 00000000         
@@ -255,7 +255,7 @@ ARM Macro Assembler    Page 4
   180 00000076 60D0            STR              R0,[R2,#0x0C]
   181 00000078 6110            STR              R0,[R2,#0x10]
   182 0000007A 6150            STR              R0,[R2,#0x14]
-  183 0000007C 4808            LDR              R0,=0x01000000
+  183 0000007C 4806            LDR              R0,=0x01000000
   184 0000007E 61D0            STR              R0,[R2,#0x1C]
   185 00000080         
 
@@ -379,22 +379,15 @@ ARM Macro Assembler    Page 6
   261 00000090                 END
               00000000 
               00000000 
-              10000000 
-              00000000 
               01000000 
+              00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M0+ --apcs=inter
 work --depend=.\objects\startup.d -o.\objects\startup.o -IC:\Users\sebastien\Do
-cuments\dev\dac-rep\trunk\supervisor\supervisor\RTE -IC:\Keil_v5\ARM\PACK\ARM\C
-MSIS\4.3.0\CMSIS\Include -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\Device\ARM\ARMCM
-0plus\Include --predefine="__EVAL SETA 1" --predefine="__UVISION_VERSION SETA 5
-15" --predefine="_RTE_ SETA 1" --predefine="ARMCM0P SETA 1" --list=.\listings\s
-
-
-
-ARM Macro Assembler    Page 7 
-
-
-tartup.lst startup.s
+cuments\dev\cm0-supervisor-demo\cm0-supervisor\supervisor\RTE -IC:\Keil_v5\ARM\
+PACK\ARM\CMSIS\4.3.0\CMSIS\Include -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\Device
+\ARM\ARMCM0plus\Include --predefine="__EVAL SETA 1" --predefine="__UVISION_VERS
+ION SETA 515" --predefine="_RTE_ SETA 1" --predefine="ARMCM0P SETA 1" --list=.\
+listings\startup.lst startup.s
 
 
 
@@ -777,7 +770,7 @@ Comment: switch_to_user_mode used once
 ARM Macro Assembler    Page 1 Alphabetic symbol ordering
 Absolute symbols
 
-Boot_Base_Address 10000000
+Boot_Base_Address 01000000
 
 Symbol: Boot_Base_Address
    Definitions

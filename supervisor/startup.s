@@ -6,7 +6,7 @@ __initial_sp		EQU			0x2001FFFC
 
 Heap_Size       EQU     0x00000C00
 
-Boot_Base_Address		EQU     0x10000000
+Boot_Base_Address		EQU     0x01000000
 
 
 

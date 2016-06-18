@@ -385,18 +385,18 @@ ARM Macro Assembler    Page 6
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M0+ --apcs=inter
 work --depend=.\objects\startup_armcm0plus.d -o.\objects\startup_armcm0plus.o -
-IC:\Users\sebastien\Documents\dev\dac-rep\trunk\supervisor\usermode\RTE -IC:\Ke
-il_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.
-3.0\Device\ARM\ARMCM0plus\Include --predefine="__EVAL SETA 1" --predefine="__UV
+IC:\Users\sebastien\Documents\dev\cm0-supervisor-demo\cm0-supervisor\usermode\R
+TE -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include -IC:\Keil_v5\ARM\PACK\AR
+M\CMSIS\4.3.0\Device\ARM\ARMCM0plus\Include --predefine="__EVAL SETA 1" --prede
 
 
 
 ARM Macro Assembler    Page 7 
 
 
-ISION_VERSION SETA 515" --predefine="_RTE_ SETA 1" --predefine="ARMCM0P SETA 1"
- --list=.\listings\startup_armcm0plus.lst RTE\Device\ARMCM0P\startup_ARMCM0plus
-.s
+fine="__UVISION_VERSION SETA 515" --predefine="_RTE_ SETA 1" --predefine="ARMCM
+0P SETA 1" --list=.\listings\startup_armcm0plus.lst RTE\Device\ARMCM0P\startup_
+ARMCM0plus.s
 
 
 

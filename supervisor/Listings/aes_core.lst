@@ -1207,11 +1207,11 @@ ARM Macro Assembler    Page 19
               00001000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M0+ --apcs=inter
 work --depend=.\objects\aes_core.d -o.\objects\aes_core.o -IC:\Users\sebastien\
-Documents\dev\dac-rep\trunk\supervisor\supervisor\RTE -IC:\Keil_v5\ARM\PACK\ARM
-\CMSIS\4.3.0\CMSIS\Include -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\Device\ARM\ARM
-CM0plus\Include --predefine="__EVAL SETA 1" --predefine="__UVISION_VERSION SETA
- 515" --predefine="_RTE_ SETA 1" --predefine="ARMCM0P SETA 1" --list=.\listings
-\aes_core.lst aes_core.s
+Documents\dev\cm0-supervisor-demo\cm0-supervisor\supervisor\RTE -IC:\Keil_v5\AR
+M\PACK\ARM\CMSIS\4.3.0\CMSIS\Include -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\Devi
+ce\ARM\ARMCM0plus\Include --predefine="__EVAL SETA 1" --predefine="__UVISION_VE
+RSION SETA 515" --predefine="_RTE_ SETA 1" --predefine="ARMCM0P SETA 1" --list=
+.\listings\aes_core.lst aes_core.s
 
 
 

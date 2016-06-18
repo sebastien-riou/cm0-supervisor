@@ -55,34 +55,43 @@ void MpuSetRegion(unsigned int region, uint32_t base, uint32_t size_power_of_2){
 	MPU->RBAR = base | 0x10 | region;
 	MPU->RASR = (0x3<<24) | ((size_power_of_2-1)<<1) | 1;
 }
-#define USER_ROM_BASE							0x10000000
+#define USER_ROM_BASE							0x01000000
 #define USER_ROM_SIZE_POWER_OF_2	16
-#define USER_RAM_BASE							0x20000000
+#define USER_RAM_BASE							0x21000000
 #define USER_RAM_SIZE_POWER_OF_2	16
 void ConfigMpu(void){
 	MpuSetRegion(0,USER_ROM_BASE,USER_ROM_SIZE_POWER_OF_2);
 	MpuSetRegion(1,USER_RAM_BASE,USER_RAM_SIZE_POWER_OF_2);
-	MPU->CTRL = 0x05;
+	MPU->CTRL = 0x05;// enable MPU with background region enabled for privileged mode (supervisor code)
 }
 
 const uint8_t aes_key[]  = {0x2b, 0x7e, 0x15, 0x16, 0x28, 0xae, 0xd2, 0xa6, 0xab, 0xf7, 0x15, 0x88, 0x09, 0xcf, 0x4f, 0x3c};
 const uint8_t aes_key2[] = {0x16, 0x28, 0x2b, 0x7e, 0xa6, 0x09, 0xcf, 0x4f, 0x3c, 0xab, 0xf7, 0xff, 0x88, 0x15, 0xae, 0xd2};
 const byte iv[]          =  {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
 
+//ensure a pointer points to user mode memory
+#define sanitize_user_pointer(p) do {p=(void*) ((uint32_t)p | 0x01000000);} while(0)
+
 void SAPI_AesEncryptDirect(unsigned int dummy, uint8_t *out, const uint8_t *in){
 	Aes aesContext;
+	sanitize_user_pointer(out);
+	sanitize_user_pointer(in);
 	AesSetKey(&aesContext, aes_key, sizeof(aes_key), iv, AES_ENCRYPTION);
 	AesCbcEncrypt(&aesContext, out, in, 16);
 }
 
 void SAPI_AesDecryptDirect(unsigned int dummy, uint8_t *out, const uint8_t *in){
 	Aes aesContext;
+	sanitize_user_pointer(out);
+	sanitize_user_pointer(in);
 	AesSetKey(&aesContext, aes_key, sizeof(aes_key), iv, AES_DECRYPTION);
 	AesCbcDecrypt(&aesContext, out, in, 16);
 }
 
 void SAPI_AesDecryptDirectKey2(unsigned int dummy, uint8_t *out, const uint8_t *in){
 	Aes aesContext;
+	sanitize_user_pointer(out);
+	sanitize_user_pointer(in);
 	AesSetKey(&aesContext, aes_key2, sizeof(aes_key), iv, AES_DECRYPTION);
 	AesCbcDecrypt(&aesContext, out, in, 16);
 }
